@@ -49,6 +49,8 @@ const Index = () => {
       specialty: "Лэшмейкер",
       experience: "9+ лет",
       isTop: true,
+      photo:
+        "https://cdn.poehali.dev/files/5ea1e500-ab39-46b8-b3fb-091fc5ced231.jpg",
     },
     {
       name: "Анастасия Борисова",
@@ -56,6 +58,8 @@ const Index = () => {
       specialty: "Лэшмейкер",
       experience: "5+ лет",
       isTop: true,
+      photo:
+        "https://cdn.poehali.dev/files/30492877-9183-4ac0-9522-29214ae53fae.jpg",
     },
     {
       name: "Владлена Рябцева",
@@ -63,6 +67,8 @@ const Index = () => {
       specialty: "Лэшмейкер",
       experience: "4+ года",
       isTop: true,
+      photo:
+        "https://cdn.poehali.dev/files/6cd87c57-29ba-4326-8521-9bc0bccf4299.jpg",
     },
     {
       name: "Анна Журавлёва",
@@ -70,6 +76,8 @@ const Index = () => {
       specialty: "Бровист",
       experience: "3+ года",
       isTop: true,
+      photo:
+        "https://cdn.poehali.dev/files/678ee30a-4086-468e-88a2-fd01c96db65c.jpg",
     },
     {
       name: "Виктория Кундина",
@@ -77,6 +85,8 @@ const Index = () => {
       specialty: "Лэшмейкер",
       experience: "1+ год",
       isTop: false,
+      photo:
+        "https://cdn.poehali.dev/files/b2fa820c-7191-4374-a354-c0a28fec88a1.jpg",
     },
   ];
 
@@ -213,8 +223,12 @@ const Index = () => {
                 className="border-border hover:shadow-lg transition-shadow bg-white"
               >
                 <CardHeader className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent to-secondary mx-auto mb-4 flex items-center justify-center">
-                    <Icon name="User" size={32} className="text-primary" />
+                  <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
+                    <img
+                      src={master.photo}
+                      alt={master.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <CardTitle className="text-primary font-montserrat">
                     {master.name}
@@ -330,6 +344,13 @@ const Index = () => {
                 >
                   <Icon name="Users" className="mr-2" />
                   ВКонтакте
+                </Button>
+                <Button
+                  variant="outline"
+                  className="justify-start border-primary text-primary hover:bg-primary hover:text-primary-foreground col-span-2"
+                >
+                  <Icon name="Users" className="mr-2" />
+                  Одноклассники
                 </Button>
               </div>
 
