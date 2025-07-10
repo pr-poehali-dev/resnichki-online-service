@@ -128,7 +128,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-accent/20 to-secondary/30">
-        <div className="absolute inset-0 bg-[url('/img/e25999d9-f417-4bdf-857c-7c2ebcd81fe6.jpg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('https://cdn.poehali.dev/files/1921171c-d97f-4193-a6e8-651fc00ae84b.JPG')] bg-cover bg-center opacity-30 blur-sm"></div>
         <div className="relative z-10 text-center px-4">
           <h1 className="text-5xl md:text-6xl font-montserrat font-bold text-primary mb-6">
             Студия красоты
@@ -153,8 +153,8 @@ const Index = () => {
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >
-              <Icon name="Phone" className="mr-2" />
-              +7 (920) 362-37-22
+              <Icon name="MessageCircle" className="mr-2" />
+              Чат с администратором
             </Button>
           </div>
         </div>
@@ -320,6 +320,12 @@ const Index = () => {
                 <Button
                   variant="outline"
                   className="justify-start border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  onClick={() =>
+                    window.open(
+                      "https://www.instagram.com/resnichki.tsaryova?igsh=MWUzcnh3aGwzdDNhMw==",
+                      "_blank",
+                    )
+                  }
                 >
                   <Icon name="Instagram" className="mr-2" />
                   Instagram
@@ -327,6 +333,9 @@ const Index = () => {
                 <Button
                   variant="outline"
                   className="justify-start border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  onClick={() =>
+                    window.open("https://t.me/resnichki_37", "_blank")
+                  }
                 >
                   <Icon name="MessageCircle" className="mr-2" />
                   Telegram
@@ -334,6 +343,12 @@ const Index = () => {
                 <Button
                   variant="outline"
                   className="justify-start border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  onClick={() =>
+                    window.open(
+                      "https://wa.me/79203623722?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82!%20%F0%9F%91%8B%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82",
+                      "_blank",
+                    )
+                  }
                 >
                   <Icon name="MessageSquare" className="mr-2" />
                   WhatsApp
@@ -341,6 +356,9 @@ const Index = () => {
                 <Button
                   variant="outline"
                   className="justify-start border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  onClick={() =>
+                    window.open("https://vk.com/sk.resnichki", "_blank")
+                  }
                 >
                   <Icon name="Users" className="mr-2" />
                   ВКонтакте
@@ -348,6 +366,9 @@ const Index = () => {
                 <Button
                   variant="outline"
                   className="justify-start border-primary text-primary hover:bg-primary hover:text-primary-foreground col-span-2"
+                  onClick={() =>
+                    window.open("https://ok.ru/sk.resnichki37", "_blank")
+                  }
                 >
                   <Icon name="Users" className="mr-2" />
                   Одноклассники
@@ -361,7 +382,15 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground mb-4">
                   Есть вопросы? Напишите нам, и мы быстро ответим!
                 </p>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                  onClick={() =>
+                    window.open(
+                      "https://wa.me/79203623722?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82!%20%F0%9F%91%8B%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82",
+                      "_blank",
+                    )
+                  }
+                >
                   <Icon name="MessageCircle" className="mr-2" />
                   Начать чат
                 </Button>
