@@ -119,7 +119,12 @@ const Index = () => {
                 Контакты
               </a>
             </div>
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
+            <Button
+              className="bg-accent hover:bg-accent/90 text-accent-foreground"
+              onClick={() =>
+                window.open("https://bumpix.net/marinatsaryova", "_blank")
+              }
+            >
               Записаться онлайн
             </Button>
           </div>
@@ -144,6 +149,9 @@ const Index = () => {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              onClick={() =>
+                window.open("https://bumpix.net/marinatsaryova", "_blank")
+              }
             >
               <Icon name="Calendar" className="mr-2" />
               Записаться онлайн
