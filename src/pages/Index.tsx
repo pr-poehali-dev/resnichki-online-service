@@ -47,7 +47,7 @@ const Index = () => {
       name: "Марина Царёва",
       role: "Инструктор / Руководитель",
       specialty: "Лэшмейкер",
-      experience: "9+ лет",
+
       isTop: true,
       photo:
         "https://cdn.poehali.dev/files/5ea1e500-ab39-46b8-b3fb-091fc5ced231.jpg",
@@ -56,7 +56,7 @@ const Index = () => {
       name: "Анастасия Борисова",
       role: "Топ-мастер",
       specialty: "Лэшмейкер",
-      experience: "5+ лет",
+
       isTop: true,
       photo:
         "https://cdn.poehali.dev/files/30492877-9183-4ac0-9522-29214ae53fae.jpg",
@@ -65,7 +65,7 @@ const Index = () => {
       name: "Владлена Рябцева",
       role: "Топ-мастер",
       specialty: "Лэшмейкер",
-      experience: "4+ года",
+
       isTop: true,
       photo:
         "https://cdn.poehali.dev/files/6cd87c57-29ba-4326-8521-9bc0bccf4299.jpg",
@@ -74,7 +74,7 @@ const Index = () => {
       name: "Анна Журавлёва",
       role: "Топ-мастер",
       specialty: "Бровист",
-      experience: "3+ года",
+
       isTop: true,
       photo:
         "https://cdn.poehali.dev/files/678ee30a-4086-468e-88a2-fd01c96db65c.jpg",
@@ -83,7 +83,7 @@ const Index = () => {
       name: "Виктория Кундина",
       role: "Мастер-стажёр",
       specialty: "Лэшмейкер",
-      experience: "1+ год",
+
       isTop: false,
       photo:
         "https://cdn.poehali.dev/files/b2fa820c-7191-4374-a354-c0a28fec88a1.jpg",
@@ -96,7 +96,7 @@ const Index = () => {
       <nav className="bg-white/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-montserrat font-bold text-primary">
+            <div className="text-2xl font-montserrat font-bold text-black">
               Реснички
             </div>
             <div className="hidden md:flex space-x-8">
@@ -172,34 +172,42 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="border-border hover:shadow-lg transition-shadow"
-              >
-                <CardHeader className="bg-gradient-to-r from-accent/20 to-secondary/20">
-                  <CardTitle className="text-primary font-montserrat">
-                    {service.category}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <div className="space-y-3">
-                    {service.items.map((item, itemIndex) => (
-                      <div
-                        key={itemIndex}
-                        className="flex justify-between items-center"
-                      >
-                        <span className="text-foreground">{item.name}</span>
-                        <span className="font-semibold text-primary">
-                          {item.price}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Наращивание ресниц - Инструктор */}
+            <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <img
+                src="https://cdn.poehali.dev/files/825a0ea1-967f-4647-8fd8-31e6da0525c1.jpg"
+                alt="Прайс-лист инструктора"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+
+            {/* Наращивание ресниц - Топ-мастер */}
+            <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <img
+                src="https://cdn.poehali.dev/files/82f75e31-527c-4894-ba50-e5533abc5e6d.jpg"
+                alt="Прайс-лист топ-мастера"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+
+            {/* Уход за бровями */}
+            <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <img
+                src="https://cdn.poehali.dev/files/3502bc2f-a910-4758-b18a-d1300bb3fab5.jpg"
+                alt="Прайс-лист уход за бровями"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+
+            {/* Перманентный макияж */}
+            <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <img
+                src="https://cdn.poehali.dev/files/5b72e427-75a6-4346-aa63-daf649281795.jpg"
+                alt="Прайс-лист перманентный макияж"
+                className="w-full h-auto object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -247,9 +255,6 @@ const Index = () => {
                     >
                       {master.specialty}
                     </Badge>
-                    <p className="text-sm text-muted-foreground">
-                      Опыт работы: {master.experience}
-                    </p>
                   </div>
                 </CardContent>
               </Card>
