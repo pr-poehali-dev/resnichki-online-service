@@ -94,61 +94,97 @@ const Index = () => {
     <div className="min-h-screen bg-background font-open-sans">
       {/* Navigation */}
       <nav className="bg-white/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-montserrat font-bold text-black">
+        <div className="container mx-auto px-4 py-3 lg:py-4">
+          <div className="flex items-center justify-between flex-wrap gap-2">
+            <div className="text-xl lg:text-2xl font-montserrat font-bold text-black">
               Реснички
             </div>
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-4 lg:space-x-6 text-sm">
               <a
                 href="#services"
-                className="text-foreground hover:text-primary transition-colors"
+                className="text-gray-600 hover:text-black transition-colors"
               >
                 Услуги
               </a>
               <a
                 href="#masters"
-                className="text-foreground hover:text-primary transition-colors"
+                className="text-gray-600 hover:text-black transition-colors"
               >
                 Мастера
               </a>
               <a
-                href="#contact"
-                className="text-foreground hover:text-primary transition-colors"
+                href="#gallery"
+                className="text-gray-600 hover:text-black transition-colors"
               >
-                Контакты
+                Галерея
+              </a>
+              <a
+                href="https://vk.com/resnichki37"
+                target="_blank"
+                className="text-gray-600 hover:text-black transition-colors"
+              >
+                ВКонтакте
+              </a>
+              <a
+                href="https://wa.me/79040409929?text=Добро%20пожаловать%20в%20Реснички37!%20Как%20дела?"
+                target="_blank"
+                className="text-gray-600 hover:text-black transition-colors"
+              >
+                WhatsApp
+              </a>
+              <a
+                href="https://instagram.com/resnichki37"
+                target="_blank"
+                className="text-gray-600 hover:text-black transition-colors"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://t.me/Resnichki37_bot"
+                target="_blank"
+                className="text-gray-600 hover:text-black transition-colors"
+              >
+                Telegram Bot
               </a>
             </div>
-            <Button
-              className="bg-accent hover:bg-accent/90 text-accent-foreground"
-              onClick={() =>
-                window.open("https://bumpix.net/marinatsaryova", "_blank")
-              }
-            >
-              Записаться онлайн
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button 
+                className="bg-accent hover:bg-accent/90 text-accent-foreground text-sm px-3 lg:px-4"
+                onClick={() => window.open('https://bumpix.net/marinatsaryova', '_blank')}
+              >
+                Записаться онлайн
+              </Button>
+              <Button 
+                variant="outline"
+                size="sm"
+                className="md:hidden"
+                onClick={() => window.open('https://t.me/Resnichki37_bot', '_blank')}
+              >
+                <Icon name="MessageCircle" size={16} />
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-accent/20 to-secondary/30">
+      <section className="relative min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-accent/20 to-secondary/30">
         <div className="absolute inset-0 bg-[url('https://cdn.poehali.dev/files/1921171c-d97f-4193-a6e8-651fc00ae84b.JPG')] bg-cover bg-center opacity-30 blur-sm"></div>
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-6xl font-montserrat font-bold text-primary mb-6">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-montserrat font-bold text-primary mb-4 lg:mb-6">
             Студия красоты
             <br />
             <span className="text-accent">Реснички</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-6 lg:mb-8 max-w-2xl mx-auto">
             Более 2000 довольных клиентов за 9+ лет работы.
-            <br />
+            <br className="hidden sm:block" />
             Профессиональное наращивание ресниц и уход за бровями.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center items-center">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto"
               onClick={() =>
                 window.open("https://bumpix.net/marinatsaryova", "_blank")
               }
@@ -159,7 +195,8 @@ const Index = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full sm:w-auto"
+              onClick={() => window.open('https://t.me/Resnichki37_bot', '_blank')}
             >
               <Icon name="MessageCircle" className="mr-2" />
               Чат с администратором
@@ -169,18 +206,18 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
+      <section id="services" className="py-12 lg:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-montserrat font-bold text-primary mb-4">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-montserrat font-bold text-primary mb-4">
               Наши услуги
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
               Полный спектр услуг для создания безупречного образа
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
             {/* Наращивание ресниц - Инструктор */}
             <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <img
