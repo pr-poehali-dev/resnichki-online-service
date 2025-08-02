@@ -47,46 +47,37 @@ const Index = () => {
       name: "Марина Царёва",
       role: "Инструктор / Руководитель",
       specialty: "Лэшмейкер",
-
       isTop: true,
       photo:
         "https://cdn.poehali.dev/files/5ea1e500-ab39-46b8-b3fb-091fc5ced231.jpg",
+      bookingUrl: "https://bumpix.net/marinatsaryova",
     },
     {
       name: "Анастасия Борисова",
       role: "Топ-мастер",
       specialty: "Лэшмейкер",
-
       isTop: true,
       photo:
         "https://cdn.poehali.dev/files/30492877-9183-4ac0-9522-29214ae53fae.jpg",
-    },
-    {
-      name: "Владлена Рябцева",
-      role: "Топ-мастер",
-      specialty: "Лэшмейкер",
-
-      isTop: true,
-      photo:
-        "https://cdn.poehali.dev/files/6cd87c57-29ba-4326-8521-9bc0bccf4299.jpg",
+      bookingUrl: "https://bumpix.net/nastya.tkv",
     },
     {
       name: "Анна Журавлёва",
       role: "Топ-мастер",
       specialty: "Бровист",
-
       isTop: true,
       photo:
         "https://cdn.poehali.dev/files/678ee30a-4086-468e-88a2-fd01c96db65c.jpg",
+      bookingUrl: "https://bumpix.net/annaresnichki",
     },
     {
       name: "Виктория Кундина",
       role: "Мастер-стажёр",
       specialty: "Лэшмейкер",
-
       isTop: false,
       photo:
         "https://cdn.poehali.dev/files/b2fa820c-7191-4374-a354-c0a28fec88a1.jpg",
+      bookingUrl: "https://bumpix.net/victory.tk",
     },
   ];
 
@@ -138,6 +129,13 @@ const Index = () => {
                 className="text-gray-600 hover:text-black transition-colors"
               >
                 Instagram
+              </a>
+              <a
+                href="https://t.me/resnichki_37"
+                target="_blank"
+                className="text-gray-600 hover:text-black transition-colors"
+              >
+                Админ
               </a>
               <a
                 href="https://t.me/Resnichki37_bot"
@@ -196,10 +194,19 @@ const Index = () => {
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full sm:w-auto"
-              onClick={() => window.open('https://t.me/Resnichki37_bot', '_blank')}
+              onClick={() => window.open('https://t.me/resnichki_37', '_blank')}
             >
               <Icon name="MessageCircle" className="mr-2" />
               Чат с администратором
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-accent text-accent hover:bg-accent hover:text-accent-foreground w-full sm:w-auto"
+              onClick={() => window.open('https://t.me/Resnichki37_bot', '_blank')}
+            >
+              <Icon name="Bot" className="mr-2" />
+              Telegram Bot
             </Button>
           </div>
         </div>
@@ -291,7 +298,7 @@ const Index = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <div className="space-y-2">
+                  <div className="space-y-4">
                     <Badge
                       variant={master.isTop ? "default" : "secondary"}
                       className={
@@ -300,6 +307,13 @@ const Index = () => {
                     >
                       {master.specialty}
                     </Badge>
+                    <Button
+                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                      onClick={() => window.open(master.bookingUrl, '_blank')}
+                    >
+                      <Icon name="Calendar" className="mr-2" size={16} />
+                      Записаться
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -415,13 +429,23 @@ const Index = () => {
                 </Button>
                 <Button
                   variant="outline"
-                  className="justify-start border-primary text-primary hover:bg-primary hover:text-primary-foreground col-span-2"
+                  className="justify-start border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                   onClick={() =>
                     window.open("https://ok.ru/sk.resnichki37", "_blank")
                   }
                 >
                   <Icon name="Users" className="mr-2" />
                   Одноклассники
+                </Button>
+                <Button
+                  variant="outline"
+                  className="justify-start border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                  onClick={() =>
+                    window.open("https://t.me/Resnichki37_bot", "_blank")
+                  }
+                >
+                  <Icon name="Bot" className="mr-2" />
+                  Telegram Bot
                 </Button>
               </div>
 
@@ -433,16 +457,29 @@ const Index = () => {
                   Есть вопросы? Напишите нам, и мы быстро ответим!
                 </p>
                 <Button
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mb-3"
                   onClick={() =>
                     window.open(
-                      "https://wa.me/79203623722?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82!%20%F0%9F%91%8B%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82",
+                      "https://t.me/resnichki_37",
                       "_blank",
                     )
                   }
                 >
                   <Icon name="MessageCircle" className="mr-2" />
                   Начать чат
+                </Button>
+                <Button
+                  variant="outline"
+                  className="w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                  onClick={() =>
+                    window.open(
+                      "https://t.me/Resnichki37_bot",
+                      "_blank",
+                    )
+                  }
+                >
+                  <Icon name="Bot" className="mr-2" />
+                  Telegram Bot
                 </Button>
               </div>
             </div>
