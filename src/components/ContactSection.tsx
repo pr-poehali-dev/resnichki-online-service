@@ -183,28 +183,28 @@ const ContactSection = () => {
               <a
                 href="https://t.me/resnichki_37"
                 target="_blank"
-                className="text-gray-600 hover:text-black transition-colors"
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 Админ
               </a>
               <a
-                href="https://wa.me/79040409929?text=Добро%20пожаловать%20в%20Реснички37!%20Как%20дела?"
+                href="https://wa.me/79203623722?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82!%20%F0%9F%91%8B%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82"
                 target="_blank"
-                className="text-gray-600 hover:text-black transition-colors"
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 WhatsApp
               </a>
               <a
-                href="https://instagram.com/resnichki37"
+                href="https://www.instagram.com/resnichki.tsaryova?igsh=MWUzcnh3aGwzdDNhMw=="
                 target="_blank"
-                className="text-gray-600 hover:text-black transition-colors"
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 Instagram
               </a>
               <a
                 href="https://t.me/Resnichki37_bot"
                 target="_blank"
-                className="text-gray-600 hover:text-black transition-colors"
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 Telegram Bot
               </a>
