@@ -55,7 +55,7 @@ const MastersSection = () => {
       photo:
         "https://cdn.poehali.dev/files/7dcb7349-afe9-494e-9a08-a4835421fca3.JPG",
       bookingUrl: "https://bumpix.net/annashmeleva",
-      description: "Химик по образованию, 10 лет в бьюти-индустрии. Перфекционист, который учится у лучших мастеров мира. Каждая деталь должна быть безупречной.",
+      description: "Химик по образованию, 10 лет в бьюти-индустрии. Перфекционист, который учится у лучших мастеров нашей страны. Каждая деталь должна быть безупречной.",
       experience: "10+ лет",
       specialization: "Архитектура бровей, долговременная укладка"
     },
@@ -117,10 +117,16 @@ const MastersSection = () => {
                   </div>
                   <Button
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
-                    onClick={() => window.open(master.bookingUrl, '_blank')}
+                    asChild
                   >
-                    <Icon name="Calendar" className="mr-2" size={16} />
-                    Записаться
+                    <a
+                      href={master.bookingUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon name="Calendar" className="mr-2" size={16} />
+                      Записаться
+                    </a>
                   </Button>
                 </div>
               </CardContent>
