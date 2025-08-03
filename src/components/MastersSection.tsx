@@ -53,7 +53,7 @@ const MastersSection = () => {
       specialty: "Бровист",
       isTop: false,
       photo:
-        "https://cdn.poehali.dev/files/d8f5a92e-4c1b-4e0a-9f2e-8b3a7d6c2f1e.jpg",
+        "/img/5e0b97c9-f45f-44c2-a851-22dd9296d90e.jpg",
       bookingUrl: "https://bumpix.net/annashmeleva",
       description: "Химик по образованию, 10 лет в бьюти-индустрии. Перфекционист, который учится у лучших мастеров мира. Каждая деталь должна быть безупречной.",
       experience: "10+ лет",
