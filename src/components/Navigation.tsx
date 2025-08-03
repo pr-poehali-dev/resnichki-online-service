@@ -48,13 +48,7 @@ const Navigation = () => {
               variant="outline"
               size="sm"
               className="md:hidden"
-              onClick={() => {
-                if (window.innerWidth < 768) {
-                  window.location.href = 'https://t.me/Resnichki37_bot';
-                } else {
-                  window.open('https://t.me/Resnichki37_bot', '_blank');
-                }
-              }}
+              onClick={() => window.open('https://t.me/Resnichki37_bot', '_blank')}
             >
               <Icon name="MessageCircle" size={16} />
             </Button>
