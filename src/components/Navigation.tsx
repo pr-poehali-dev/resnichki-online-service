@@ -40,7 +40,13 @@ const Navigation = () => {
             <Button
               size="sm"
               className="bg-accent hover:bg-accent/90 text-accent-foreground text-sm px-3 lg:px-4"
-              onClick={() => window.open('https://bumpix.net/marinatsaryova', '_blank')}
+              onClick={() => {
+                if (window.innerWidth < 768) {
+                  window.location.href = 'https://bumpix.net/marinatsaryova';
+                } else {
+                  window.open('https://bumpix.net/marinatsaryova', '_blank');
+                }
+              }}
             >
               Записаться онлайн
             </Button>
@@ -48,7 +54,13 @@ const Navigation = () => {
               variant="outline"
               size="sm"
               className="md:hidden"
-              onClick={() => window.open('https://t.me/Resnichki37_bot', '_blank')}
+              onClick={() => {
+                if (window.innerWidth < 768) {
+                  window.location.href = 'https://t.me/Resnichki37_bot';
+                } else {
+                  window.open('https://t.me/Resnichki37_bot', '_blank');
+                }
+              }}
             >
               <Icon name="MessageCircle" size={16} />
             </Button>
