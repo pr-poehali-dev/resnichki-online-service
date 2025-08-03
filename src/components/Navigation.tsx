@@ -40,13 +40,7 @@ const Navigation = () => {
             <Button
               size="sm"
               className="bg-accent hover:bg-accent/90 text-accent-foreground text-sm px-3 lg:px-4"
-              onClick={() => {
-                if (window.innerWidth < 768) {
-                  window.location.href = 'https://bumpix.net/marinatsaryova';
-                } else {
-                  window.open('https://bumpix.net/marinatsaryova', '_blank');
-                }
-              }}
+              onClick={() => window.open('https://bumpix.net/marinatsaryova', '_blank')}
             >
               Записаться онлайн
             </Button>
