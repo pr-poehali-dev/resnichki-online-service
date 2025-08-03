@@ -36,16 +36,16 @@ const MastersSection = () => {
       specialization: "Сложные эффекты, объёмы 2D-6D"
     },
     {
-      name: "Ирина Медведева",
-      role: "Мастер",
+      name: "Виктория Кундина",
+      role: "Мастер-стажер",
       specialty: "Лэшмейкер",
       isTop: false,
       photo:
-        "https://cdn.poehali.dev/files/c4e8a02e-b1b3-4f0a-bf6e-3b6a2d9c5f8e.jpg",
-      bookingUrl: "https://bumpix.net/irinmedvedeva",
-      description: "Профессиональный мастер с внимательным подходом к каждому клиенту. Создаёт естественные и красивые образы.",
-      experience: "3+ года",
-      specialization: "Классическое наращивание, лёгкие объёмы"
+        "https://cdn.poehali.dev/files/8eedc5e1-57f4-4cbf-b21b-45f864eb50f7.jpg",
+      bookingUrl: "https://bumpix.net/viktoriakundina",
+      description: "Начинающий мастер с большим энтузиазмом и стремлением к совершенству. Проходит стажировку под руководством топ-мастеров студии.",
+      experience: "1+ год",
+      specialization: "Классическое наращивание, базовые объёмы"
     },
     {
       name: "Анна Журавлёва",
