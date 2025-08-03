@@ -19,6 +19,9 @@ const MastersSection = () => {
       photo:
         "https://cdn.poehali.dev/files/5ea1e500-ab39-46b8-b3fb-091fc5ced231.jpg",
       bookingUrl: "https://bumpix.net/marinatsaryova",
+      description: "С детства мечтала о собственном бизнесе. Экономист и художник-оформитель с пятилетним опытом менеджера-дизайнера. Основатель студии, где совмещает роли руководителя и мастера.",
+      experience: "9+ лет",
+      specialization: "Обучение, бизнес-процессы, объёмы"
     },
     {
       name: "Анастасия Борисова",
@@ -28,6 +31,9 @@ const MastersSection = () => {
       photo:
         "https://cdn.poehali.dev/files/30492877-9183-4ac0-9522-29214ae53fae.jpg",
       bookingUrl: "https://bumpix.net/nastiaboro",
+      description: "Начала путь в 2019 году как клиентка, влюбилась в профессию и стала топовым мастером. Специализируется на сложных и нестандартных эффектах.",
+      experience: "5+ лет",
+      specialization: "Сложные эффекты, объёмы 2D-6D"
     },
     {
       name: "Ирина Медведева",
@@ -37,15 +43,21 @@ const MastersSection = () => {
       photo:
         "https://cdn.poehali.dev/files/c4e8a02e-b1b3-4f0a-bf6e-3b6a2d9c5f8e.jpg",
       bookingUrl: "https://bumpix.net/irinmedvedeva",
+      description: "Профессиональный мастер с внимательным подходом к каждому клиенту. Создаёт естественные и красивые образы.",
+      experience: "3+ года",
+      specialization: "Классическое наращивание, лёгкие объёмы"
     },
     {
-      name: "Анна Шмелёва",
-      role: "Мастер",
+      name: "Анна Журавлёва",
+      role: "Мастер-бровист",
       specialty: "Бровист",
       isTop: false,
       photo:
         "https://cdn.poehali.dev/files/d8f5a92e-4c1b-4e0a-9f2e-8b3a7d6c2f1e.jpg",
       bookingUrl: "https://bumpix.net/annashmeleva",
+      description: "Химик по образованию, 10 лет в бьюти-индустрии. Перфекционист, который учится у лучших мастеров мира. Каждая деталь должна быть безупречной.",
+      experience: "10+ лет",
+      specialization: "Архитектура бровей, долговременная укладка"
     },
   ];
 
@@ -84,14 +96,25 @@ const MastersSection = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <div className="space-y-4">
-                  <Badge
-                    variant={master.isTop ? "default" : "secondary"}
-                    className={
-                      master.isTop ? "bg-primary text-primary-foreground" : ""
-                    }
-                  >
-                    {master.specialty}
-                  </Badge>
+                  <div className="flex flex-wrap gap-2 justify-center mb-3">
+                    <Badge
+                      variant={master.isTop ? "default" : "secondary"}
+                      className={
+                        master.isTop ? "bg-primary text-primary-foreground" : ""
+                      }
+                    >
+                      {master.specialty}
+                    </Badge>
+                    <Badge variant="outline" className="text-xs">
+                      {master.experience}
+                    </Badge>
+                  </div>
+                  <p className="text-sm text-muted-foreground text-left mb-3">
+                    {master.description}
+                  </p>
+                  <div className="text-xs text-accent font-medium mb-3">
+                    Специализация: {master.specialization}
+                  </div>
                   <Button
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
                     onClick={() => window.open(master.bookingUrl, '_blank')}
